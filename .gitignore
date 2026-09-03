@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# YOLO / Ultralytics
+*.pt
+yolov8n.pt
+runs/
+wandb/
+*.engine
+*.onnx

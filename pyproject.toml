@@ -3,9 +3,20 @@ name = "yolo-ex"
 version = "0.1.0"
 requires-python = ">=3.12"
 dependencies = [
+    "inference-sdk>=1.5.1",
+    "ipykernel>=7.3.0",
+    "jupyterlab>=4.6.3",
+    "opencv-python==4.12.0.88",
+    "python-dotenv>=1.2.3",
+    "roboflow>=1.4.2",
     "torch>=2.14.0",
     "torchvision>=0.29.0",
+    "ultralytics>=8.4.123",
 ]
+
+[tool.uv]
+# roboflow가 opencv-python-headless를 끌어와 cv2.imshow가 막히므로 GUI 버전만 사용
+override-dependencies = ["opencv-python-headless ; sys_platform == 'never'"]
 
 [[tool.uv.index]]
 name = "pytorch-cu126"
