@@ -226,3 +226,6 @@ runs/
 wandb/
 *.engine
 *.onnx
+
+
+weights/
