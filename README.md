@@ -2,8 +2,14 @@
 roboflow기반 yolo활용
 
 # 가상환경 만들기
+```powershell
+# 현재 PowerShell에서 스크립트 실행 허용
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
-uv init --bare --name yolo-ex
+
+```
+uv init --bare --python 3.12 --name yolo-ex
+uv python pin 3.12
 ```
 
 # 주피터 노트북 환경만들기
@@ -38,13 +44,13 @@ uv add roboflow
 uv add "opencv-python==4.12.0.88"
 ```
 
-# jpyter lab 사용
+# jupyter lab 사용
 - jupyterlab 설치
 ```
 uv add jupyterlab
 ```
 
-- jupyterlab 실힝
+- jupyterlab 실행
 ```
 uv run jupyter lab
 ```
